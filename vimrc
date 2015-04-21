@@ -10,6 +10,8 @@ set nobackup
 set nowritebackup
 set noswapfile
 set history=50
+
+set hlsearch      " highlight your search word
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
