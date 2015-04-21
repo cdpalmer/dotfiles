@@ -43,6 +43,9 @@ color jellybeans
 " Add Rails, Fugitive, and RVM info to statusline
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%{rbenv#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" map to CtrlP
+nnoremap <C-F> :CtrlP<cr>
+
 " map to bufexplorer
 nnoremap <C-B> :BufExplorer<cr>
 let g:bufExplorerShowRelativePath=1
@@ -55,12 +58,6 @@ let g:yankring_persist=0
 
 " Set Font
 set guifont=PanicSans:h15
-
-" Get off my lawn (make vim keys, not war)
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-rspec mappings
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
@@ -161,24 +158,6 @@ augroup vimrcEx
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
   endif
 
-augroup END
-
-augroup tech_words_to_avoid
-  autocmd!
-  " Highlight words to avoid in tech writing
-  " =======================================
-  "
-  "   obviously, basically, simply, of course, clearly,
-  "   just, everyone knows, However, So, easy
-
-  "   http://css-tricks.com/words-avoid-educational-writing/
-
-  highlight TechWordsToAvoid ctermbg=red ctermfg=white
-  match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however\|so,\|easy/
-  autocmd BufWinEnter * match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
-  autocmd InsertEnter * match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
-  autocmd InsertLeave * match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
-  autocmd BufWinLeave * call clearmatches()
 augroup END
 
 " Local config
