@@ -5,6 +5,9 @@ set nocompatible
 " Set map leader
 let mapleader = ","
 
+" NerdTree to show dot files
+let NERDTreeShowHidden=1
+
 " I dont want backups.
 set nobackup
 set nowritebackup
@@ -47,6 +50,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%{rbenv#statusline()}%=%-14.(
 
 " map to CtrlP
 nnoremap <C-F> :CtrlP<cr>
+let g:ctrlp_working_path_mode = '0'
 
 " map to bufexplorer
 nnoremap <C-B> :BufExplorer<cr>
