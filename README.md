@@ -20,7 +20,10 @@ updated](http://robots.thoughtbot.com/keeping-a-github-fork-updated)).
 
 Install [rcm](https://github.com/thoughtbot/rcm):
 
-    brew bundle dotfiles/Brewfile
+~~brew bundle dotfiles/Brewfile~~
+    
+This will not work anymore, you will have to use the `Brewfile` as reference
+for what you need to install with: `brew install ghostscript`, for example
 
 Install:
 
