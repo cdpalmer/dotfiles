@@ -22,7 +22,8 @@ done
 export CLICOLOR=1
 
 # load dotfiles scripts
-export PATH="$HOME/.bin:$PATH"
+# export PATH="$HOME/.bin:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 
 # aliases
@@ -33,3 +34,5 @@ export PATH="$HOME/.bin:$PATH"
 
 # antigen
 [[ -f ~/.antigenrc ]] && source ~/.antigenrc
+
+source ~/.bash_profile
