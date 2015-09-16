@@ -36,3 +36,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -f ~/.antigenrc ]] && source ~/.antigenrc
 
 source ~/.bash_profile
+source ~/.aliases

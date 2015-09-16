@@ -23,3 +23,6 @@
   default = current
 [pull]
   ff = only
+[user]
+	name = Cody Palmer
+	email = cody.palmer08@gmail.com
