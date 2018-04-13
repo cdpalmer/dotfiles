@@ -37,13 +37,15 @@ set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 set expandtab
-set shell=/usr/local/bin/zsh
+set shell=/bin/zsh
 
 " Numbers
 set number
 set numberwidth=5
 
 color jellybeans
+
+let g:ctrlp_custom_ignore = 'node_modules'
 
 " Add Rails, Fugitive, and RVM info to statusline
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%{rbenv#statusline()}%=%-14.(%l,%c%V%)\ %P
